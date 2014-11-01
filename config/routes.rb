@@ -1,4 +1,5 @@
 Belluga::Application.routes.draw do
+  devise_for :users
   root "pages#home"
   get "look" => "pages#look"
   get "become" => "pages#become"
