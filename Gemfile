@@ -10,6 +10,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass'
+gem "paperclip"
 
 group :development, :test do
      gem 'sqlite3'

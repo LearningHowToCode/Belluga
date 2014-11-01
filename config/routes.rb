@@ -1,10 +1,14 @@
 Belluga::Application.routes.draw do
+  resources :listings
+
   devise_for :users
   root "pages#home"
-  get "look" => "pages#look"
+  get "look" => "listings#index"
   get "become" => "pages#become"
   get "how" => "pages#how"
   get "about" => "pages#about"
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
