@@ -3,39 +3,104 @@
     <p>Please complete the form below to sign up as a tutor.</p>
   <form role="form">
     <div class="form-group">
-      <label for="exampleInputEmail1">Username</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Belluga">
+      <label for="exampleInputFirstName">First Name</label>
+      <input type="first name" class="form-control" id="exampleInputFirstName" placeholder="John">
+      <span class="help-block">Only your first name will be displayed publicly.</span>
     </div>
     <div class="form-group">
-      <label for="exampleInputEmail1">First Name</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="John">
-    </div>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Last Name</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Koch">
+      <label for="exampleInputLastName">Last Name</label>
+      <input type="last name" class="form-control" id="exampleInputLastName" placeholder="Koch">
     </div>
     <div class="form-group">
       <label for="exampleInputEmail1">Email Address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="belluga@gmail.com">
+      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="John_Koch_Belluga@gmail.com">
     </div>
     <div class="form-group">
       <label for="exampleInputFile">Profile Picture</label>
       <input type="file" id="exampleInputFile">
-      <h5 class="help-block">Please choose a picture that shows your face clearly.</h5>
+      <span class="help-block">Please choose a picture that shows your face clearly.</span>
     </div>
     <div class="form-group">
-      <label for="exampleInputEmail1">Password</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+      <div class="form-group">
+      <label for="exampleInputYoutube">Youtube Self-Introduction Video</label>
+      <input type="youtube" class="form-control" id="exampleInputYoutube" placeholder="http://">
+      <span class="help-block">Uploading a short Youtube video significantly increases your adds of finding students.</span>
     </div>
+      <label for="exampleInputNationality">Nationality</label>
+      <select class="form-control">
+        <option>USA</option>
+        <option>Australia</option>
+        <option>UK</option>
+        <option>Canada</option>
+        <option>Singapore</option>
+      </select>
+      </div>
     <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      <label for="exampleInputLanguage">Language</label>
+      <select class="form-control">
+        <option>English</option>
+        <option>Chinese</option>
+        <option>Korean</option>
+        <option>Japanese</option>
+      </select>
+      </div>
+      <div class="form-group">
+      <label for="exampleInputRate">Hourly Rate</label>
+      <select class="form-control">
+        <option>2,000 JPY</option>
+        <option>2,500 JPY</option>
+        <option>3,000 JPY</option>
+        <option>4,000 JPY</option>
+        <option>4,500 JPY</option>
+        <option>5,500 JPY</option>
+        <option>5,500 JPY</option>
+        <option>6,000 JPY</option>
+        <option>6,500 JPY</option>
+        <option>7,000 JPY</option>
+        <option>7,500 JPY</option>
+        <option>8,000 JPY</option>
+        <option>8,500 JPY</option>
+        <option>9,000 JPY</option>
+        <option>9,500 JPY</option>
+        <option>10,000 JPY</option>
+      </select>
+      </div>
+      <div class="form-group">
+      <label for="exampleInputJapanese">Japanese Fluency</label>
+      <select class="form-control">
+        <option>No Fluency</option>
+        <option>Basics</option>
+        <option>Conversational</option>
+        <option>Business</option>
+        <option>Native</option>
+      </select>
+      </div>
+    
+    <div class="form-group">
+      <label for="exampleInputPassword1">Profile (200 letters or less)</label>
+      <textarea class="form-control" rows="3"></textarea>
     </div>
-    <div class="checkbox">
+    
+    <div class="form-group">
+      <label for="exampleInputPassword1">Profile (1,000 letters or less)</label>
+      <textarea class="form-control" rows="3"></textarea>
+    </div>
+    
+    <div class="radio">
       <label>
-        <input type="checkbox"> Check me out
+        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+        Bank
       </label>
     </div>
+    
+    <div class="radio">
+      <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+        PayPal
+      </label>
+    </div>
+    
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
 </div>
+
