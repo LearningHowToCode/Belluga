@@ -5,7 +5,7 @@ class ListingsController < ApplicationController
   def index
     @listings = Listing.all
     respond_with(@listings)
-  end
+    end
 
   def show
     respond_with(@listing)
