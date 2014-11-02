@@ -21,14 +21,31 @@ class ListingsController < ApplicationController
 
   def create
     @listing = Listing.new(listing_params)
-    @listing.save
-    respond_with(@listing)
+    @listing.user_id = current_user.id
+
+    respond_to do |format|
+      if @listing.save
+        format.html { redirect_to @listing, notice: 'Listing was successfully created.' }
+        format.json { render action: 'show', status: :created, location: @listing }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @listing.errors, status: :unprocessable_entry }
+      end
+    end
   end
 
-  def update
-    @listing.update(listing_params)
-    respond_with(@listing)
+ def update
+    respond_to do |format|
+      if @listing.update(listing_params)
+        format.html { redirect_to @listing, notice: 'Listing was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: 'edit' }
+        format.json { render json: @listing.errors, status: :unprocessable_entry }
+      end
+    end
   end
+
 
   def destroy
     @listing.destroy
