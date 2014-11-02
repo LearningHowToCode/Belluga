@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Image</th>
       <th>Name</th>
       <th>Format</th>
       <th>Location</th>
@@ -17,6 +18,7 @@
   <tbody>
     <% @listings.each do |listing| %>
       <tr>
+        <td><%= image_tag listing.image.url(:medium) %></td>
         <td><%= listing.name %></td>
         <td><%= listing.format %></td>
         <td><%= listing.location %></td>
