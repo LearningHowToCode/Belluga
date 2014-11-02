@@ -1,12 +1,15 @@
 class ListingsController < ApplicationController
   respond_to :html, :xml, :json
   before_action :set_listing, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_filter :authenticate_user!, only: [:tutor, :new, :create, :edit, :update, :destroy]
   before_filter :check_user, only: [:edit, :update, :destroy]
 
+def tutor
+    @listings = Listing.where(user: current_user).order("created_at DESC")
+  end
+
   def index
-    @listings = Listing.all
-    respond_with(@listings)
+    @listings = Listing.all.order("created_at DESC")
     end
 
   def show

@@ -7,6 +7,7 @@ Belluga::Application.routes.draw do
   get "become" => "pages#become"
   get "how" => "pages#how"
   get "about" => "pages#about"
+  get "tutor" => "listings#tutor"
 
 
   # The priority is based upon order of creation: first created -> highest priority.
