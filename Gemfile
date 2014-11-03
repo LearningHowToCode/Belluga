@@ -13,6 +13,8 @@ gem 'bootstrap-sass'
 gem 'paperclip', '~> 3.0'
 gem "paperclip-dropbox", ">= 1.1.7"
 gem 'aws-sdk', '~> 1.20.0'
+gem 'figaro'
+gem 'stripe'
 
 group :development, :test do
      gem 'sqlite3'
