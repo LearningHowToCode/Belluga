@@ -40,6 +40,12 @@ class OrdersController < ApplicationController
       flash[:danger] = e.message
     end
 
+      transfer = Stripe::Transfer.create(
+      :amount => (@listing.price * 80).floor,
+      :currency => "usd",
+      :recipient => @tutor.recipient
+      )
+
 
 
     respond_to do |format|
