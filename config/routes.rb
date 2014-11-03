@@ -1,7 +1,10 @@
 Belluga::Application.routes.draw do
-  resources :listings
-
+  
   devise_for :users
+  resources :listings do
+    resources :orders
+  end
+
   root "pages#home"
   get "look" => "listings#index"
   get "become" => "pages#become"

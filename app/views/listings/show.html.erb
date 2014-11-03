@@ -11,6 +11,10 @@
     <p><%= @listing.location %></p>
     <p><%= @listing.description %></p>
     <p><%= number_to_currency(@listing.price) %></p>
+  <br>
+    <div class="center">
+      <%= link_to "Reserve Lesson Now", new_listing_order_path(@listing), class: "btn btn-primary" %>
+    </div>
   </div>
 </div>
 
