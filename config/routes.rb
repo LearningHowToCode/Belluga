@@ -2,7 +2,7 @@ Belluga::Application.routes.draw do
   
   devise_for :users
   resources :listings do
-    resources :orders
+    resources :orders, only: [:new, :create]
   end
 
   root "pages#home"
@@ -11,6 +11,8 @@ Belluga::Application.routes.draw do
   get "how" => "pages#how"
   get "about" => "pages#about"
   get "tutor" => "listings#tutor"
+  get 'lessons' => "orders#lessons"
+  get 'purchases' => "orders#purchases"
 
 
   # The priority is based upon order of creation: first created -> highest priority.
